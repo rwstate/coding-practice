@@ -20,3 +20,25 @@ function diagonalDifference(arr) {
   }
   return Math.abs(difference)
 }
+
+// given an array of integers, print the ratio of positive, negative, and nil values on separate lines, fixed to 6 decimal places
+
+function plusMinus(arr) {
+  let len = arr.length
+  let pos = 0
+  let neg = 0
+  let nil = 0
+
+  for (let i=0; i<len; i++) {
+      if (arr[i] > 0) {
+          pos +=1
+      } else if (arr[i] < 0) {
+          neg += 1
+      } else {
+          nil += 1
+      }
+  }
+  console.log(pos/len.toFixed(6))
+  console.log(neg/len.toFixed(6))
+  console.log(nil/len.toFixed(6))
+}
